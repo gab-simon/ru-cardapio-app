@@ -1,8 +1,8 @@
 # ru-cardapio-app
 
 ### Features to app ⚙️...
-- [ X ] Icons
-- [ X ] Design UI (Figma)
+- [X] Icons
+- [X]  Design UI (Figma)
 - [ ] Design UI (xml)
 - [ ] Preferences Campus
 - [ ] Preferences date
