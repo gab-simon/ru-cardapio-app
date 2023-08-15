@@ -2,11 +2,11 @@
 
 ### Features to app ⚙️...
 - [X] Icons
-- [X]  Design UI (Figma)
-- [ ] Design UI (xml)
+- [X] Design UI (Figma)
+- [X] Design UI (xml)
 - [ ] Preferences Campus
-- [ ] Preferences date
+- [X] Preferences date
 - [ ] Preferances Language
-- [ ] Setup API
+- [X] Setup API
 - [ ] Widget
 - [ ] Animations
