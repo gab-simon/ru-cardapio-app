@@ -32,6 +32,12 @@ class HomeFragment : Fragment() {
         homeViewModel.text.observe(viewLifecycleOwner) {
             textView.text = it
         }
+
+        val textSubtitle: TextView = binding.textSubtitle
+        homeViewModel.textsubtitle.observe(viewLifecycleOwner) {
+            textSubtitle.text = it
+        }
+
         return root
     }
 
