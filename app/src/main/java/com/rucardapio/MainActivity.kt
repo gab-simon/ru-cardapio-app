@@ -12,6 +12,9 @@ import androidx.navigation.ui.setupWithNavController
 import androidx.drawerlayout.widget.DrawerLayout
 import androidx.appcompat.app.AppCompatActivity
 import com.rucardapio.databinding.ActivityMainBinding
+import retrofit2.Call
+import retrofit2.Callback
+import retrofit2.Response
 
 class MainActivity : AppCompatActivity() {
 
@@ -25,6 +28,21 @@ class MainActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         setSupportActionBar(binding.appBarMain.toolbar)
+
+        val service = RetrofitClient.createMenuService()
+        val call: Call<List<MenuEntity>> = service.list()
+        call.enqueue(object : Callback<List<MenuEntity>> {
+            override fun onResponse(
+                call: Call<List<MenuEntity>>,
+                response: Response<List<MenuEntity>>
+            ) {
+                val list = response.body()
+            }
+
+            override fun onFailure(call: Call<List<MenuEntity>>, t: Throwable) {
+                val s = ""
+            }
+        })
 
         binding.appBarMain.fab.setOnClickListener { view ->
             Snackbar.make(view, "TODO: send email to contact", Snackbar.LENGTH_LONG)
